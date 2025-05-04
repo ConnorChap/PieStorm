@@ -1,0 +1,50 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+
+}
+
+:root{
+    --blue: rgb(33, 28, 132);
+    --blue-alt: rgb(77, 85, 204);
+    --lavender: rgb(122, 115, 209);
+    --lavender-alt: rgb(181, 168, 213);
+}
+
+.header{
+    border: 3px;
+    border-color: white;
+    height: 45vw;
+    background-image: linear-gradient(to right, var(--blue-alt), var(--blue));
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 2vw;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Audiowide", sans-serif;
+    
+}
+
+.navbar span{
+
+}
+
+.title{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 18vw;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Audiowide", sans-serif;
+    color: white;
+    vertical-align: bottom;
+}
