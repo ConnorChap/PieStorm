@@ -14,9 +14,11 @@
   </head>
   <body>
 
-    <section class="header">
+    <section id="header" class="header">
         <nav class="navbar">
-          <span>Mobile Weather App</span>
+          <div class="navbar-brand">
+            <a href="#header"> <span>Mobile Weather App</span> </a>
+          </div>
 
           <div class="links">
             <a href="#recent">Most Recent Entry</a>
@@ -27,14 +29,52 @@
 
         <div class="summary">
           <div class="summary-text">
-            <p>TEST</p>
+            <p>Pie Storm is a mobile weather station that records live data of tempature, pressure, and humidity from a raspberry pi.</p>
           </div>
         </div>
 
         <div class="header">
-          <div class="title">Pie Storm</div>
+          <div class="title"><span>Pie Storm</span></div>
         </div>
+    </section>
 
+    <nav id="secondary-header" class="navbar">
+      <div class="navbar-brand">
+        <a href="#header"> Mobile Weather App </a>
+      </div>
+
+      <div class="links">
+        <a href="#recent">Most Recent Entry</a>
+        <a href="#tables">Data Tables</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+    
+    <section id="recent">
+
+      <h3 class="recent-entry">Recent Entry</h3>
+
+      <div class="table">
+        <table>
+          <tr>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Tempature &deg;f</th>
+            <th>Pressure</th>
+            <th>Humidity</th>
+          </tr>
+
+          <tr> 
+            <td id="location">New York</td>
+            <td id="date">2025-05-04</td>
+            <td id="time">14:00</td>
+            <td id="temp">70</td>
+            <td id="pressure">1012 hPa</td>
+            <td id="humidity">55%</td>
+          </tr>
+        </table>
+      </div>
     </section>
 
 
