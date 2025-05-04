@@ -15,7 +15,7 @@ html, body{
 .header{
     border: 3px;
     border-color: white;
-    height: 35vw;
+    height: 30vw;
     background-image: linear-gradient(to right, var(--blue-alt), var(--blue));
 }
 
@@ -71,17 +71,28 @@ html, body{
 
 .summary{
     display: flex; 
+    align-items: center;
+    justify-content: center;
     margin-left: auto; 
-    margin-right: 3vw;
-    margin-top: 2rem; 
+    margin-right: 22vw;
+    margin-top: 6vh; 
     border: 5px;
     width: 25%;
     height: 25%;
     right: 0;
     border-style: solid;
+    border-radius: 1rem;
+    border-color: var(--lavender-alt);
+    transition: all 0.2s ease-in-out;
+}
+
+.summary:hover{
+    translate: transformY(-1rem) scale(1.5);
+    box-shadow: 0 8px 24px var(--blue);
 }
 
 .summary-text{
-    
+    text-align: center;
+    color: var(--lavender-alt);
 }
 
