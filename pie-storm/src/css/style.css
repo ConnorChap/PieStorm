@@ -136,10 +136,12 @@ html, body{
     background-color: white;
     color: var(--blue);
     padding-top: 45px;
+    padding-bottom: 45px;
 }
 
 #secondary-header a{
     color: var(--blue);
+    padding-left: 1rem;
 }
 
 #recent{
@@ -147,8 +149,10 @@ html, body{
     color: var(--blue);
 }
 
-.recent-entry{
+h3{
+    padding-left: 1rem;
     padding-top: 45px;
+    color: var(--blue);
 }
 
 .table{
@@ -173,6 +177,11 @@ html, body{
     border: 1px solid var(--lavender);
 }
 
-.table tr{
+#graphs{
+    background-color: black;
+}
+
+#graphs h3{
+    color: var(--lavender-alt);
 }
 
