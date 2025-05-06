@@ -1,23 +1,22 @@
 import * as d3 from 'd3'
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js';
-import { getFirestore, collection, query, where, getDocs } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js';
-const Config = {
-  apiKey: "921e5c403f5804f844ed32a5bcdc230d87300144",
-  authDomain: "piestorm-6bc02.firebaseapp.com",
-  projectId: "piestorm-6bc02",
-  storageBucket: "piestorm-6bc02.appspot.com",
-  messagingSenderId: "118438856939179889673",
-}
+import admin from 'firebase-admin'
+import { readFile } from 'fs/promises'
 
-initializeApp({
-  credential: cert(serviceAccount),
-});
+
+const account = JSON.parse(await readFile('./src/js/piestorm-6bc02-firebase-adminsdk-fbsvc-921e5c403f.json', 'utf-8'))
+admin.initializeApp({
+    credential: admin.credential.cert(account)
+})
+const db = admin.firestore()
+
+
+
+
 const humValArr = [];
 async function fetchData() {
   const timeStampArr = [];
   const pressureArr = [];
   const tempArr = [];
-  const db = getFirestore();
   const HumidityRef = db.collection('sensor-data');
   const snapshot = await HumidityRef.where('humidity', '!=', null).get();
   
@@ -31,8 +30,8 @@ async function fetchData() {
   console.log(humValArr);
   console.log(timeStampArr);
 }
-window.onload = function(){
-  document.getElementById("temp").textContent = tempArr[0];
-}
+//window.onload = function(){
+//  document.getElementById("temp").textContent = tempArr[0];
+//}
 
 fetchData();

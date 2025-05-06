@@ -22,3 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+src/js/piestorm-6bc02-firebase-adminsdk-fbsvc-921e5c403f.json
