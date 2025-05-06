@@ -3,12 +3,11 @@ import { db } from "./fireBase.js";
 import { collection, getDocs } from "firebase/firestore";
 
 
+const snapShot = await getDocs(collection(db, 'sensor-data'))
 loadDataTable()
 
 
-
 export async function loadDataTable(){
-    const snapShot = await getDocs(collection(db, 'sensor-data'))
 
     let date = snapShot.docs[0].data()['time_stamp'].toDate()
     let localDate = date.toLocaleDateString()
