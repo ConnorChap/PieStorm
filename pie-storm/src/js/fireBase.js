@@ -1,16 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyC2iEglIw9_iVOivgN9pvfj7t1KL_P407o",
-  authDomain: "piestorm-6bc02.firebaseapp.com",
-  projectId: "piestorm-6bc02",
-  storageBucket: "piestorm-6bc02.firebasestorage.app",
-  messagingSenderId: "150432134556",
-  appId: "1:150432134556:web:3c57c2bdce168090edc459",
-  measurementId: "G-BL2GXMFNZB"
-};
+import { firebaseConfig } from "../../fireBaseCred";
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
