@@ -132,11 +132,14 @@ html, body{
 #secondary-header{
     position: sticky;
     top: 0;
-    backdrop-filter: blur(16px);
-    background-color: white;
     color: var(--blue);
     padding-top: 45px;
     padding-bottom: 45px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(16px); /* Approx for backdrop-blur-lg */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
 #secondary-header a{
@@ -149,9 +152,14 @@ html, body{
     color: var(--blue);
 }
 
-h3{
-    padding-left: 1rem;
+#graph{
     padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+#graph h3{
+    padding-left: 1rem;
+    padding-bottom: 45px;
     color: var(--blue);
 }
 
@@ -177,11 +185,21 @@ h3{
     border: 1px solid var(--lavender);
 }
 
-#graphs{
+#graph{
     background-color: black;
 }
 
-#graphs h3{
+#graph h3{
     color: var(--lavender-alt);
+}
+
+.graph-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot{
+    fill: var(--lavender);
 }
 

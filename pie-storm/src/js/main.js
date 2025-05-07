@@ -1,10 +1,12 @@
 
 import { db } from "./fireBase.js";
 import { collection, getDocs } from "firebase/firestore";
+import { timeTempGraph } from "./graph.js";
 
 
 const snapShot = await getDocs(collection(db, 'sensor-data'))
 loadDataTable()
+timeTempGraph()
 
 
 export async function loadDataTable(){
