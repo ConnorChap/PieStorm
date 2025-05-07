@@ -12,7 +12,7 @@ from firebase_admin import firestore
 def cel_to_fahrenheit(celsius):
     return (celsius * 9.05 / 5.0) + 32
 
-cred = credentials.Certificate('./piestorm-6bc02-firebase-adminsdk-fbsvc-921e5c403f.json')
+cred = credentials.Certificate('API_KEY')
 app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
