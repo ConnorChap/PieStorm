@@ -129,6 +129,12 @@ html, body{
     font-family: "Audiowide", sans-serif;
 }
 
+#recent h3{
+    padding-left: 1rem;
+    padding-bottom: 45px;
+    color: var(--blue);
+}
+
 #secondary-header{
     position: sticky;
     top: 0;
@@ -187,6 +193,7 @@ html, body{
 
 #graph{
     background-color: black;
+    border-radius: .5rem;
 }
 
 #graph h3{
@@ -201,5 +208,36 @@ html, body{
 
 .dot{
     fill: var(--lavender);
+}
+
+#about{
+    padding-bottom: 2rem;
+}
+
+.about{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border: 5px solid white;
+    padding: 1rem;
+    width: 85%;
+    height: 40%;
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: thin;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.about-text{
+    font-size: 2vw;
+    text-align: center;
+    color: var(--lavender-alt);
+}
+
+#about h3{
+    padding-left: 1rem;
+    padding-bottom: 45px;
+    color: var(--blue);
 }
 
