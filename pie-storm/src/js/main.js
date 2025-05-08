@@ -18,16 +18,22 @@ init()
 
 
 export async function loadDataTable(snapShot){
+    console.log(snapShot.docs)
 
-    let date = snapShot.docs[0].data()['time_stamp'].toDate()
+    let latest = snapShot.docs.reduce((latest, current) => {
+        return current.data()['time_stamp'].toDate() > latest.data()['time_stamp'].toDate() ? current : latest
+    })
+
+    let latestData = latest.data()
+    let date = latestData['time_stamp'].toDate()
+    
     let localDate = date.toLocaleDateString()
     let localTime = date.toLocaleTimeString()
-    //console.log(snapShot.docs[0].data())
 
-    document.getElementById('location').textContent = snapShot.docs[0].data().location
+    document.getElementById('location').textContent = latestData.location
     document.getElementById('date').textContent = localDate
     document.getElementById('time').textContent = localTime
-    document.getElementById('temp').textContent = snapShot.docs[0].data()['temp-c']
-    document.getElementById('pressure').textContent = snapShot.docs[0].data().pressure
-    document.getElementById('humidity').textContent = snapShot.docs[0].data().humidity
+    document.getElementById('temp').textContent = latestData['temp-c']
+    document.getElementById('pressure').textContent = latestData.pressure
+    document.getElementById('humidity').textContent = latestData.humidity
 }
