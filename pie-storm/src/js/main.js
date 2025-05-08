@@ -3,13 +3,21 @@ import { db } from "./fireBase.js";
 import { collection, getDocs } from "firebase/firestore";
 import { timeTempGraph } from "./graph.js";
 
+async function getDBData(){
+    return await getDocs(collection(db, 'sensor-data'))
+}
 
-const snapShot = await getDocs(collection(db, 'sensor-data'))
-loadDataTable()
-timeTempGraph()
+async function init(){
+    const snapShot = await getDBData()
+    loadDataTable(snapShot)
+    timeTempGraph()
+}
+
+init()
 
 
-export async function loadDataTable(){
+
+export async function loadDataTable(snapShot){
 
     let date = snapShot.docs[0].data()['time_stamp'].toDate()
     let localDate = date.toLocaleDateString()

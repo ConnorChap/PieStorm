@@ -16,7 +16,9 @@ export const timeTempGraph = async () => {
     const timeTemp = await getData()
     console.log(timeTemp)
 
-
+   d3.select('#time-temp')
+     .select('svg')
+     .remove()
 
     const svg = d3.select('#time-temp')
                   .append('svg')
