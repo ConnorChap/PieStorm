@@ -32,7 +32,7 @@ export const timeTempGraph = async () => {
                 .range([0, innerWidth])
     
     const y = d3.scaleLinear()
-                .domain([0, d3.max(timeTemp, d => d.temp)])
+                .domain([-15, 115])
                 .nice()
                 .range([innerHeight, 0])
 
@@ -69,6 +69,8 @@ async function getData(){
     for(const doc of snapShot.docs){
         data.push({hour: doc.data()['time_stamp'].toDate().getHours(), temp: doc.data()['temp-f']})
     }
+
+    console.log(data.temp)
 
     return data
 }

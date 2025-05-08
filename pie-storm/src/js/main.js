@@ -33,7 +33,7 @@ export async function loadDataTable(snapShot){
     document.getElementById('location').textContent = latestData.location
     document.getElementById('date').textContent = localDate
     document.getElementById('time').textContent = localTime
-    document.getElementById('temp').textContent = latestData['temp-c']
+    document.getElementById('temp').textContent = latestData['temp-f']
     document.getElementById('pressure').textContent = latestData.pressure
     document.getElementById('humidity').textContent = latestData.humidity
 }
